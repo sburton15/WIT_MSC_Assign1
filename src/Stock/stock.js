@@ -1,5 +1,4 @@
     import React from 'react';
-    import AllStocks from  './StockData';
     import StockAPI from  './StockAPI';
     import { withRouter} from 'react-router-dom';
 

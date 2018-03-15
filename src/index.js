@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { BrowserRouter, Route, Redirect, Switch } from 'react-router-dom';
-import App from './App.js';
+import Home from './App.js';
 import Restricted from './Restricted.js';
 import About from './About.js';
 import Footer from './footer.js';
@@ -10,7 +10,7 @@ import Login from './Login.js';
 import Stock from './Stock/stock.js';
 import CustomerOrder from './CustomerOrders/customerOrder.js';
 import PurchaseOrder from './PurchaseOrders/purchaseOrder.js';
-import '../../node_modules/bootstrap/dist/css/bootstrap.css';
+import 'bootstrap/dist/css/bootstrap.css';
 import './app.css';
 
 const AuthRoute = ({component: Component, loginUser}) => {
@@ -50,7 +50,7 @@ class Router extends React.Component {
                                 <Route path='/customerOrder' component={CustomerOrder} />
                                 <Route path='/purchaseOrder/:id' component={PurchaseOrder} />
                                 <Route path='/purchaseOrder' component={PurchaseOrder} />
-                                <Route exact path='/' render={props => <App userName={this.state.currentUsername} />} />
+                                <Route exact path='/' render={props => <Home userName={this.state.currentUsername} />} />
                                 <Redirect from='*' to='/' />
                             </Switch>
                         </div>
